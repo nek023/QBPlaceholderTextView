@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8DF-KG-Br6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="F4B-4s-lmA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8DF-KG-Br6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V3h-fI-uiY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qf5-pi-ihu" kind="relationship" relationship="rootViewController" id="7Ia-XW-LgL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z65-4H-F2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="181"/>
+        </scene>
+        <!--View Controller - QBPlaceholderTextView-->
+        <scene sceneID="sf5-vl-Pjt">
+            <objects>
+                <viewController id="qf5-pi-ihu" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OTx-fm-QPI"/>
+                        <viewControllerLayoutGuide type="bottom" id="SKM-3x-AHQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xhh-aT-YUh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2HY-XE-G2a" customClass="QBPlaceholderTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qf5-pi-ihu" id="1D6-v0-JPC"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2HY-XE-G2a" secondAttribute="trailing" id="Bvm-8y-HDv"/>
+                            <constraint firstItem="2HY-XE-G2a" firstAttribute="top" secondItem="Xhh-aT-YUh" secondAttribute="top" id="WOo-vg-o6L"/>
+                            <constraint firstItem="SKM-3x-AHQ" firstAttribute="top" secondItem="2HY-XE-G2a" secondAttribute="bottom" id="chj-Nc-I1k"/>
+                            <constraint firstItem="2HY-XE-G2a" firstAttribute="leading" secondItem="Xhh-aT-YUh" secondAttribute="leading" id="fkY-Ia-ewN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="QBPlaceholderTextView" id="g93-Iq-XOi"/>
+                    <connections>
+                        <outlet property="bottomMargin" destination="chj-Nc-I1k" id="gbL-5u-8cI"/>
+                        <outlet property="textView" destination="2HY-XE-G2a" id="s9K-nT-URf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdu-vD-FIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="181"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
