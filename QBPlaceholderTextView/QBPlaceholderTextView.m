@@ -98,14 +98,11 @@
 
 - (void)setPlaceholder:(NSString *)placeholder
 {
+    _placeholder = placeholder;
+    
     self.placeholderLabel.text = placeholder;
     
     [self updatePlaceholder];
-}
-
-- (NSString *)placeholder
-{
-    return self.placeholderLabel.text;
 }
 
 
